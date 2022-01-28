@@ -4,14 +4,14 @@ Nesta entrega vamos desenvolver um CRUD de usuário utilizando TypeORM.
 
 Endpoints do serviço:
 
-| Método | Endpoint | Responsabilidade                                                                                                 |
-| ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
-| POST   | /users   | Criação de usuários                                                                                              |
-| POST   | /login   | Gera um token JWT recebendo email e password no corpo da requisição como JSON.                                   |
-| GET    | /users   | Lista todos os usuários                                                                                          |
-| GET    | /users   | /profile Retorna os dados do usuário logado (usuário a qual pertence o token que será necessário neste endpoint) |
-| PATCH  | /users   | /<uuid> Atualiza os dados de um usuário                                                                          |
-| DELETE | /users   | /<uuid> Deleta usuários do banco                                                                                 |
+| Método | Endpoint       | Responsabilidade                                                                                        |
+| ------ | -------------- | ------------------------------------------------------------------------------------------------------- |
+| POST   | /users         | Criação de usuários                                                                                     |
+| POST   | /login         | Gera um token JWT recebendo email e password no corpo da requisição como JSON.                          |
+| GET    | /users         | Lista todos os usuários                                                                                 |
+| GET    | /users/profile | Retorna os dados do usuário logado (usuário a qual pertence o token que será necessário neste endpoint) |
+| PATCH  | /users         | /<uuid> Atualiza os dados de um usuário                                                                 |
+| DELETE | /users         | /<uuid> Deleta usuários do banco                                                                        |
 
 ## Configuracao
 
