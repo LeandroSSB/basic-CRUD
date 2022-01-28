@@ -1,0 +1,33 @@
+{
+  "name": "crud-de-usuario",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --files src/server.ts",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "sucrase": "^3.20.3",
+    "typeorm": "^0.2.41",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^17.0.12",
+    "@types/uuid": "^8.3.4",
+    "@types/yup": "^0.29.13",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}
