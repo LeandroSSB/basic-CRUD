@@ -30,7 +30,20 @@ npm install
 
 para instalar devidamente as dependencias
 
-A porta padrao da aplicacao e 3000
+- Instale as migrations
+
+```
+  yarn typeorm migration:run
+
+```
+
+Caso precise apagar a tabela:
+
+```
+yarn typeorm migration:revert
+```
+
+- A porta padrao da aplicacao e 3000
 
 ## Aviso
 
