@@ -4,7 +4,7 @@ declare global {
   namespace Express {
     interface Request {
       AuthenticatedUser?: UserModel;
-      isAdm: boolean;
+      isAdm?: boolean;
     }
   }
 }
