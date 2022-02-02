@@ -21,13 +21,19 @@ class UpdateUserService {
 
     if (compare?.uuid !== uuid) {
       if (isAdm) {
-        await userRepository.update(uuid, data);
+        await userRepository.update(uuid, {
+          updatedOn: new Date().toJSON(),
+          ...data,
+        });
       } else {
         throw new Error("Missing admin permissions");
       }
     }
 
-    await userRepository.update(uuid, data);
+    await userRepository.update(uuid, {
+      updatedOn: new Date().toJSON(),
+      ...data,
+    });
     const user = await userRepository.findOne(uuid);
 
     if (!user) {

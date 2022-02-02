@@ -17,14 +17,16 @@ class UpdateUserController {
     let token = req.headers.authorization?.split(" ")[1] || "";
     jwt.verify(token, config.secret, async (err: any, decode: any) => {
       try {
-        if (req.body.isAdm) {
-          res.status(401).json({ message: "forbidden field isAdm" });
+        if (req.body.isAdm || req.body.createdOn) {
+          res
+            .status(401)
+            .json({ message: `forbidden fields: isAdm, createdOn` });
         }
         const user = await new UpdateUserService().execute({
           uuid: req.params.uuid as string,
           owner: decode.email,
           data: req.body,
-          isAdm: req.isAdm,
+          isAdm: req.isAdm as boolean,
         });
         return res.send(user);
       } catch (e: any) {

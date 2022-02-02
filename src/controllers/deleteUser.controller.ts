@@ -20,7 +20,7 @@ class DeleteUserController {
         const deleteRes = await new DeleteUserService().execute({
           uuid: req.params.uuid,
           owner: decode.email,
-          isAdm: req.isAdm,
+          isAdm: req.isAdm as boolean,
         });
         return res.json({ message: deleteRes });
       } catch (e: any) {
