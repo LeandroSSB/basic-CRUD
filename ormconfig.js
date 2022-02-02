@@ -21,4 +21,17 @@ const devEnv = {
   database: process.env.PG_DB 
 }
 
-module.exports = devEnv
+const testEnv = {
+  type: 'sqlite',
+  database: ':memory:',
+  entities: ['./src/entities/**/*.ts'],
+  synchronize: true,
+}
+
+let exportModule = devEnv
+
+if (process.env.NODE_ENV === "test"){
+  exportModule = testEnv
+}
+
+module.exports = testEnv

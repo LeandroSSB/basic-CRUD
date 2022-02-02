@@ -10,7 +10,7 @@ class FindUserService {
         email,
       },
     });
-    if (!user) {
+    if (!user?.name) {
       throw new Error("User not found");
     }
     return user;
